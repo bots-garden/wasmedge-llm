@@ -1,0 +1,27 @@
+#image:
+#  file: .gitpod.dockerfile
+
+image: k33g/wasmedge-llm-lite:0.0.0
+
+tasks:
+  - name: initialize
+    before: |
+      echo "before"
+
+ports:
+  - port: 8080
+    visibility: public
+
+vscode:
+  extensions:
+    - PKief.material-icon-theme
+    - PKief.material-product-icons
+    - GitHub.github-vscode-theme
+    - huytd.github-light-monochrome
+    - wesbos.theme-cobalt2
+    - aaron-bond.better-comments
+    - golang.go
+    - rust-lang.rust-analyzer
+    - marp-team.marp-vscode
+
+
