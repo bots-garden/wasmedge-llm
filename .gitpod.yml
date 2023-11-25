@@ -1,13 +1,8 @@
 #image:
 #  file: .gitpod.dockerfile
 
-image: k33g/wasmedge-llm-lite:0.0.1
+image: gitpod/workspace-base
 
-tasks:
-  - name: initialize
-    before: |
-      curl -LO https://github.com/second-state/llama-utils/raw/main/chat/llama-chat.wasm
-      curl -LO https://huggingface.co/wasmedge/llama2/blob/main/llama-2-7b-chat-q5_k_m.gguf
 
 ports:
   - port: 8080

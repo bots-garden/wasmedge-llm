@@ -1,2 +1,0 @@
-# Docker images for Gitpod
-

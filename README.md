@@ -1,16 +1,5 @@
 # wasmedge-llm
 
-## Use this repository with Gitpod
-
-### Read-only mode
-
-- [🍊 Open it with Gitpod](https://gitpod.io/#https://github.com/bots-garden/wasmedge-llm)
-
-### Read-write mode
-
-- Fork this repository
-- Then use this link to open it with Gitpod: https://gitpod.io/#https://github.com/<YOUR-GITHUB-HANDLE>/wasmedge-llm
-
 ## Use this repository with Docker Development Environment
 
 ### Prerequisites
@@ -39,3 +28,13 @@ Then:
 8. 🎉 and now, you can open your new Dev Environment in **VSCode**
 
 Or you can test it like this: [🐳 Open it with Docker Dev Environment (ARM version - experimental)](https://open.docker.com/dashboard/dev-envs?url=https://github.com/bots-garden/wasmedge-llm/tree/main)
+
+
+## Start with WasmEdge LLM
+
+```bash
+curl -LO https://huggingface.co/second-state/Llama-2-7B-Chat-GGUF/resolve/main/llama-2-7b-chat.Q5_K_M.gguf
+curl -LO https://github.com/second-state/llama-utils/raw/main/chat/llama-chat.wasm
+
+wasmedge --dir .:. --nn-preload default:GGML:AUTO:llama-2-7b-chat.Q5_K_M.gguf llama-chat.wasm 
+```
