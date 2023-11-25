@@ -16,6 +16,15 @@ RUN <<EOF
 apt-get update 
 apt-get install -y curl wget git build-essential xz-utils bat exa software-properties-common 
 apt-get install -y clang lldb lld
+
+apt-get install -y libcblas-dev
+apt-get install -y libhdf5-dev
+apt-get install -y libhdf5-serial-dev
+apt-get install -y libatlas-base-dev
+apt-get install -y libjasper-dev 
+apt-get install -y libqtgui4 
+apt-get install -y libqt4-test
+
 ln -s /usr/bin/batcat /usr/bin/bat
 EOF
 
